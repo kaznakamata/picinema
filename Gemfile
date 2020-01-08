@@ -60,3 +60,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'pry-rails'
+gem "haml-rails", ">= 1.0", '<= 2.0.1'
+gem 'themoviedb-api'
+gem 'jquery-rails'
+gem 'js_cookie_rails'

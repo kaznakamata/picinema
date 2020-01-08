@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+.search_reviews{
+  height: 2em;
+}
+
+.search-engine{
+  opacity: 0;
+}
+// .review-body{
+//   opacity: 1;
+// }
+
+form{
+  height: 100px;
+  width: 300px;
+  opacity: 0;
+}
+
+.btn{
+  margin: 0 auto;
+}
+
+#firstword{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: white;
+  font-size: 1em;
+}
+
+#main__center__poster__left__form__tmdb_id{
+  opacity: 0;
+}
+#main__center__poster__left__form__review{
+  width: 30%;
+  height: 10%;
+  margin-top: 45vh;
+  position: absolute;
+  right: 3.5%;
+}
+
+#poster_left_btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.main__center__poster__left__form{
+  position: relative;
+}
+.main__center__poster__left__form img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#submit_left{
+  position: absolute;
+  display: inline-block;
+  top: 60%;
+  right: 3.5%;
+  z-index: 1;
+  cursor        : pointer;
+  border        : 2px solid #000066;
+  font-family: 'PT Sans', sans-serif;
+}
+#submit_right{
+  border: 2px solid white;
+}
+
+.main{
+  background-image: url("top.jpg");
+  height: 100vh;
+  background-size: cover;
+  &__center{
+    padding: 30px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    // &__review{
+    //   width: 300px;
+    //   height: 450px;
+    //   border: 1px solid black;
+    //   position: absolute;
+    //   top: 125px;
+    //   left: 65px;
+    //   margin: 0;
+    // }
+    &__poster{
+      &__firstword{
+        float: right;
+      }
+      &__btn{
+        padding-top: 40vh;
+        height: 2em;
+        font-size: 1.5em;
+        font-family: 'PT Sans', sans-serif;
+        width: 312px;
+      }
+      &__left{
+        position: relative;
+        height: 450px;
+        width: 300px;
+        top: 15%;
+        cursor: pointer;
+        &__writedreview{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 300px;
+          height: 450px;
+          z-index: 1;
+          font-family: 'M PLUS Rounded 1c', sans-serif;
+          color: white;
+          font-size: 1em;
+        }
+        &__info{
+          font-family: 'PT Sans', sans-serif;
+          height: 15vh;
+          width: 35%;
+          position: absolute;
+          right: 5%;
+          top: 25%;
+          text-align: right;
+          &-title{
+            font-size: 1.5em;
+          }
+
+        }
+        // &__review{
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+        // }
+        &__form{
+          width: 100%;
+          height: 400px;
+        }
+        &__image{
+          width: 300px;
+          height: 440px;
+          cursor: pointer;
+          text-align: center;
+        }
+        &__name{
+          font-size: 1em;
+          width: 100%;
+          color: white;
+          font-family: 'Solway', serif;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+      &__right{
+        position: relative;
+        &__image{
+          width: 300px;
+          height: 440px;
+          cursor: pointer;
+          text-align: center;
+        }
+        &__name{
+          font-size: 1em;
+          width: 100%;
+          color: white;
+          font-family: 'Solway', serif;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+// btn action animation
+.btn-three {
+	color: #FFF;
+	transition: all 0.5s;
+  position: relative;
+  width: 230px;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-three::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba(255,255,255,0.1);
+	transition: all 0.3s;
+}
+.btn-three:hover::before {
+	opacity: 0 ;
+	transform: scale(0.5,0.5);
+}
+.btn-three::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border: 1px solid rgba(255,255,255,0.5);
+	transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+	opacity: 1;
+	transform: scale(1,1);
+}
+
+
+// ここから下がpush
+
+// .btn-three {
+//   display: inline-block;
+//   max-width: 180px;
+//   text-align: left;
+//   background-color: #ffa300;
+//   font-size: 16px;
+//   color: #FFF;
+//   text-decoration: none;
+//   font-weight: bold;
+//   padding: 10px 24px;
+//   border-radius: 4px;
+//   border-bottom: 4px solid #d37800;
+// }
+
+.btn-three:active {
+    transform: scale(0.9);
+    border-bottom: none;
+}

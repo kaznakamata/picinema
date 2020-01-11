@@ -1,0 +1,31 @@
+.head
+  %link{href:"https://fonts.googleapis.com/css?family=PT+Sans|M+PLUS+Rounded+1c&display=swap", rel:"stylesheet"}
+.nav_bar
+
+.main
+  .main__center
+    .main__center__poster__left
+      .main__center__poster__left__writedreview
+      =image_tag src=""
+      =form_with url: "/reviews/search", id: "search-engine", method: :GET, local: true do |form|
+        =form.text_field :keyword, class: "search-reviews"
+        =form.submit "SEARCH", id: "search-btn"
+
+    .main__center__poster__btn
+      #firstword
+        本日の映画をランダムピック
+      .box-3
+        .btn.btn-three
+          %span
+            Pickinema!!
+    
+    .main__center__poster__left__info
+      .main__center__poster__left__info-title
+      .main__center__poster__left__info-releasedate
+      .main__center__poster__left__info-overview
+
+    .main__center__poster__left__review
+      =form_with url: reviews_path, id: "review-body", method: :POST, model: Review.new, local: true do |form|  
+        =form.text_field :tmdb_id, id: "main__center__poster__left__form__tmdb_id", placeholder: "mtdb_id"
+        =form.text_area :body, id: "main__center__poster__left__form__review", placeholder: "Write your review"
+        =form.submit "SEND", id: "submit_left" 

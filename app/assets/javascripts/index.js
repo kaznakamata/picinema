@@ -30,8 +30,6 @@ $(function(){
         var input = $(".search-reviews").val();
         $("img").css({opacity: 0.1});
         $(".main__center__poster__left__writedreview").css({opacity: 1});
-
-        
         $.ajax({
           type: 'GET',
           url: '/reviews/search',
@@ -41,7 +39,6 @@ $(function(){
         .done(function(reviews){
           $.each(reviews, function(index, review){
             var writed = review.body
-            console.log(writed);
             $(".main__center__poster__left__writedreview").empty().append(`
                                                 <li>
                                                 ${writed}
@@ -63,7 +60,6 @@ $(function(){
     }
 
     function formAppear(){
-      // $("form").css({opacity: 1});
       $("#review-body").css({opacity: 1});
     }
 
